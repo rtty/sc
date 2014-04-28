@@ -55,14 +55,15 @@ object Main {
    */
   def balance(chars: List[Char]): Boolean = {
 
-		def marker(list: List[Char], opened:Int = 0) : Boolean = {
-			if(opened < 0 || list.isEmpty) opened == 0
-			else if(list.head == '(')marker(list.tail, opened+1) 
-			else if(list.head == ')')marker(list.tail, opened-1)
-			else marker(list.tail, opened)
-		}
-		
-		marker(chars)
+	def marker(list: List[Char], opened:Int = 0) : Boolean = {
+		if(opened < 0 || list.isEmpty) opened == 0
+		else if(list.head == '(')marker(list.tail, opened+1) 
+	else if(list.head == ')')marker(list.tail, opened-1)
+		else marker(list.tail, opened)
+	}
+	
+	println(1)
+	marker(chars)
   }
 
   /**
