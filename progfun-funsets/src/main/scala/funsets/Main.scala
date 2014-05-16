@@ -23,4 +23,5 @@ object Main extends App {
   println(exists(Set(2,3), i => i==1))
   
   printSet(map(Set(2,3,1,22,44,1,1,2,3), i => i*10))
+  printSet(map(Set(2,3,1,22,44,1,1,2,3), i => i*10))
 }
