@@ -72,13 +72,12 @@ object FunSets {
    * Returns a set transformed by applying `f` to each element of `s`.
    */
   def map(s: Set, f: Int => Int): Set = {
-    def iterate (x : Int) : Set = {
-      if (x > bound ) ((y:Int) => false)
-      else if (s(x)) union(singletonSet(f(x)),iterate(x +1))
-      else iterate(x+1)
+    def iter(a : Int) : Set = {
+      if (a > bound ) ((y:Int) => false)
+      else if (s(a)) union(singletonSet(f(a)),iter(a + 1))
+      else iter(a+1)
     }
-    iterate(-bound)
-    
+    iter(-bound)    
   }
 
   /**
@@ -96,9 +95,4 @@ object FunSets {
     println(toString(s))
   }
   
-  def main(args: Array[String]) {    
-	  val s = Set
-	  println(s)
-  }
-
 }
