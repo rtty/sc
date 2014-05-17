@@ -87,4 +87,10 @@ object FunSets {
   def printSet(s: Set) {
     println(toString(s))
   }
+  
+  def main(args: Array[String]) {    
+	  val s = Set
+	  println(s)
+  }
+
 }
