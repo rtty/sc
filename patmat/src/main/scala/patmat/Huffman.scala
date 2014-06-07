@@ -169,6 +169,7 @@ object Huffman {
    */
   def createCodeTree(chars: List[Char]): CodeTree = chars match {
       case char :: c => until(singleton, combine)(makeOrderedLeafList(times(chars))).head
+      case Nil => throw new Exception("Error empty list")
   }
 
 
