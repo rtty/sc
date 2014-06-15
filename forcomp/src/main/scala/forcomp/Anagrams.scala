@@ -100,7 +100,7 @@ object Anagrams {
    *  and has no zero-entries.
    */
   def subtract(x: Occurrences, y: Occurrences): Occurrences = {
-    ((((x ++ (y.map(li => (li._1, -li._2)))).groupBy(x => x._1)).mapValues(_.map(_._2).sum).toList).filter(_._2 != 0)).sorted
+    ((((x ++ (y.map(i => (i._1, -i._2)))).groupBy(x => x._1)).mapValues(_.map(_._2).sum).toList).filter(_._2 != 0)).sorted
   }
 
   /** Returns a list of all anagram sentences of the given sentence.
