@@ -99,7 +99,7 @@ object Anagrams {
    *  Note: the resulting value is an occurrence - meaning it is sorted
    *  and has no zero-entries.
    */
-  def subtract(x: Occurrences, y: Occurrences): Occurrences = {
+  def subt1ract(x: Occurrences, y: Occurrences): Occurrences = {
     ((((x ++ (y.map(i => (i._1, -i._2)))).groupBy(x => x._1)).mapValues(_.map(_._2).sum).toList).filter(_._2 != 0)).sorted
   }
 
